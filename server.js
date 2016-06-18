@@ -63,6 +63,7 @@ app.delete('/items/:id',jsonParser,function(request,response) {
     var item = storage.delete(request.params.id);   // get item id from the URL, pass it to storage.delete method
     
     if(item) {  // trap item ID does not exist
+        // response.json({'REMOVED':item});
         response.status(201).json(item);    //return success code and the item deleted
     }
     else {
