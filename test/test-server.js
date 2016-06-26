@@ -60,8 +60,6 @@ describe('Shopping List', function() {
             .end(function(err,response) {
                 response.should.have.status(201);
                 response.should.be.json;
-                response.should.have.status(201);
-                response.should.be.json;
                 response.body.should.be.a('object');
                 response.body.should.have.property('name');
                 response.body.should.have.property('id');
